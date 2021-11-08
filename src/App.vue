@@ -1,17 +1,23 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <EmployerList :employers="employers"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import data from '../MOCK_DATA.json'
+
+import EmployerList from './components/EmployerList.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    EmployerList
+  },
+  data(){
+    return{
+      employers: data,
+    }
   }
 }
 </script>
